@@ -49,6 +49,7 @@ class CountryPickerDialog extends StatefulWidget {
   final List<Country> filteredCountries;
   final PickerDialogStyle? style;
   final String languageCode;
+  final Widget? searchFieldDivider;
 
   const CountryPickerDialog({
     Key? key,
@@ -59,6 +60,7 @@ class CountryPickerDialog extends StatefulWidget {
     required this.selectedCountry,
     required this.filteredCountries,
     this.style,
+    this.searchFieldDivider,
   }) : super(key: key);
 
   @override
@@ -121,7 +123,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                 },
               ),
             ),
-            const SizedBox(height: 20),
+            widget.searchFieldDivider ?? const SizedBox.shrink(),
             Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
