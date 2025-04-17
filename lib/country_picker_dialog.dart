@@ -26,8 +26,7 @@ class PickerDialogStyle {
 
   final double? height;
 
-  PickerDialogStyle(
-    this.height, {
+  PickerDialogStyle({
     this.backgroundColor,
     this.countryCodeStyle,
     this.countryNameStyle,
@@ -38,6 +37,7 @@ class PickerDialogStyle {
     this.searchFieldInputDecoration,
     this.searchFieldPadding,
     this.width,
+    this.height,
   });
 }
 
