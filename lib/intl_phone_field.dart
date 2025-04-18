@@ -360,6 +360,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
     await showDialog(
       context: context,
       useRootNavigator: false,
+      barrierColor: const Color(0x33B3B3B3),
       builder: (context) => StatefulBuilder(
         builder: (ctx, setState) => CountryPickerDialog(
           languageCode: widget.languageCode.toLowerCase(),
